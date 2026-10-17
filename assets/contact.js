@@ -1,0 +1,1 @@
+document.querySelector('#contact-enquiry').addEventListener('submit',event=>{event.preventDefault();const status=event.currentTarget.querySelector('.form-status');status.hidden=false;status.textContent='This form is a preview. Submission will be available once the service is connected.';});

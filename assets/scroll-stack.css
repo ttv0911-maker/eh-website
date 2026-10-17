@@ -1,0 +1,7 @@
+/* Retain half a heading line above each incoming opaque sheet. */
+@media(prefers-reduced-motion:no-preference){
+ .development-rows,.hw-process-rows{position:relative;isolation:isolate;clip-path:inset(0)}
+ .development-rows>article,.hw-process-rows>article{position:sticky;top:min(var(--stack-top,16px),calc(100svh - var(--stack-height,136px) - 16px));background:var(--white)}
+ .development-rows>article::after,.hw-process-rows>article::after{content:'';display:block;position:absolute;top:100%;bottom:auto;left:0;right:0;height:max(100svh,var(--stack-cover,600px));background:var(--white);pointer-events:none;scale:1;transition:none}
+}
+@media print{.development-rows,.hw-process-rows{clip-path:none}.development-rows>article,.hw-process-rows>article{position:static!important}.development-rows>article::after,.hw-process-rows>article::after{display:none!important}}

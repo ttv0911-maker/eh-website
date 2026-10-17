@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-factory-image]').forEach(button=>button.addEventListener('click',()=>{const image=document.querySelector('.cn-current');image.src=button.dataset.factoryImage;image.alt=button.dataset.imageAlt;document.querySelectorAll('[data-factory-image]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)))}));
