@@ -5,3 +5,5 @@
 @media(prefers-reduced-motion:reduce){.cg-category{transition:none}.cg-category-track{scroll-behavior:auto}.cg-hero .hero-before{display:none}}
 @media print{.cg-category-track{overflow:visible;flex-wrap:wrap}.cg-category{flex-basis:30%;height:380px}.cg-carousel-controls{display:none}}
 .cg-category:last-child::after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,var(--limestone) 86%);pointer-events:none}.cg-category:last-child .cg-category-copy{z-index:1}
+
+.cg-hero-copy{position:absolute;inset:0;padding:132px 76px 0}.cg-hero-copy>p{font:500 40px/1.2 "Cormorant Garamond",Georgia,serif;margin-bottom:56px}.cg-hero h1{font-family:Mulish,Arial,sans-serif;font-size:clamp(60px,10.6vw,160px);line-height:1;font-weight:750;letter-spacing:.005em;margin:0}@media(max-width:700px){.cg-hero-copy{padding:40px 20px 0}.cg-hero-copy>p{font-size:26px;margin-bottom:28px}.cg-hero h1{font-size:10.4vw;letter-spacing:0}}
