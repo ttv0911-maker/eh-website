@@ -19,3 +19,5 @@ const customerShares={northAmerica:null,china:null,oceania:null,europe:null};
 document.querySelectorAll('[data-market]').forEach(element=>{const value=customerShares[element.dataset.market];element.textContent=value===null?'—%':`${value}%`;});
 document.querySelectorAll('.pending-link').forEach(link=>link.addEventListener('click',event=>event.preventDefault()));
 document.querySelector('#newsletter-form').addEventListener('submit',event=>{event.preventDefault();const status=event.currentTarget.querySelector('.form-status');status.hidden=false;status.textContent='This form is a preview. Submission will be available once the service is connected.';});
+
+(()=>{document.querySelectorAll('[data-slide]').forEach(button=>button.addEventListener('click',()=>{const track=document.querySelector('.carousel-track');track.scrollBy({left:Number(button.dataset.slide)*(track.firstElementChild.clientWidth+12),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})}))})();
