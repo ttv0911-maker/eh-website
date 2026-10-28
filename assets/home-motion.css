@@ -7,3 +7,12 @@
 .stepped-home .home-scene-nav{display:none}.stepped-home .capabilities-scene .capability-grid article{width:100%;max-width:none}.stepped-home .capabilities-scene .capability-grid .step-image{height:42vh}.stepped-home .capabilities-scene .capability-grid img{width:100%;height:100%;aspect-ratio:auto}.stepped-home .capabilities-scene{padding-bottom:48px}.stepped-home .capabilities-scene .capability-grid .text-mask{padding-bottom:3px}@media(max-height:650px) and (min-width:701px){.stepped-home .capabilities-scene .capability-grid .step-image{height:34vh}.stepped-home .company-scene{padding-top:24px}.stepped-home .company-scene>.step-image{height:26vh}.stepped-home .company-grid h3{margin-bottom:8px}.stepped-home .company-grid p{font-size:13px}}
 
 .hero>.step-image{position:absolute;inset:0}.hero>.step-image>.step-original{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}@media(max-width:700px){html:not(.stepped-home) .hero>.step-image{top:280px;height:400px}html:not(.stepped-home) .hero>.step-image>.step-original{top:0;object-position:67% bottom}}
+
+@media(min-width:701px){
+.stepped-home .company-grid{align-items:stretch}
+.stepped-home .company-grid article{display:grid;grid-template-rows:9vh 3.2em 1fr auto;gap:16px;align-content:start}
+.stepped-home .company-grid article>.factory-logo{margin:0;width:100%;height:9vh}
+.stepped-home .company-grid article>.text-mask{margin:0;overflow:visible}
+.stepped-home .company-grid h3,.stepped-home .company-grid p,.stepped-home .company-grid .discover{margin:0;min-height:0}
+.stepped-home .company-grid h3{display:flex;align-items:flex-start;justify-content:center}
+}
