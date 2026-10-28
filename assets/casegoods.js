@@ -3,17 +3,6 @@ const nav=document.querySelector('#navigation');
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open);});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');}});
 const reduced=matchMedia('(prefers-reduced-motion:reduce)');
-const hero=document.querySelector('.hero-before');
-const composite=document.querySelector('.hero-composite');
-let heroAnimation;
-function revealTitle(){
- if(reduced.matches||!composite.complete||!composite.naturalWidth||!hero.complete||!hero.naturalWidth)return;
- // The supplied final artwork already places the lettering behind the vase.
- // Crossfade the aligned, text-free source over it to preserve that occlusion.
- heroAnimation=hero.animate([{opacity:1},{opacity:1,offset:.16},{opacity:0}],{duration:1900,easing:'cubic-bezier(.25,.6,.25,1)'});
-}
-Promise.all([composite.decode().catch(()=>{}),hero.decode().catch(()=>{})]).then(revealTitle);
-reduced.addEventListener('change',()=>{if(reduced.matches)heroAnimation?.cancel();});
 const track=document.querySelector('.cg-category-track');
 const previous=document.querySelector('[data-carousel=previous]');
 const next=document.querySelector('[data-carousel=next]');

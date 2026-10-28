@@ -12,3 +12,12 @@ main img:not(.cap-tile>img){clip-path:none!important;--site-mask:none!important}
 .project-frame .project-frame-button,.project-frame .project-frame-button:is(:hover,:focus-visible,:active){color:#fff!important;background:transparent!important;border-color:#fff!important}.project-frame-button *{color:inherit!important}.group-companies article>img{display:block;margin:0 auto 32px;object-fit:contain}
 @media(prefers-reduced-motion:no-preference){.hw-process-rows>article,.hw-process-rows>article:first-child{min-height:136px;padding:12px 0;top:var(--stack-top,16px);margin-bottom:clamp(120px,26vh,256px)}.hw-process-rows>article:last-child{margin-bottom:0}.hw-process-rows .process-detail ul{margin-top:24px}.hw-process-rows .process-detail li{font-size:18px;gap:12px;margin-bottom:16px}.hw-process-rows .stack-covered>.process-detail{visibility:hidden}}
 @media(max-width:700px){.hw-process-rows>.process-detail,.hw-process-rows>article>.process-detail{grid-column:2}}
+
+/* Readable CTA labels in every interaction state, including touch and keyboard. */
+.button{color:var(--origin);text-decoration:none;overflow:visible}
+.button::before{display:none!important}
+.button:is(:hover,:focus-visible,:active){color:#fff!important;background:var(--origin)!important}
+.button:is(:hover,:focus-visible,:active) *{color:inherit!important}
+.project-frame .project-frame-button:is(:hover,:focus-visible,:active){color:#fff!important;background:rgba(35,31,32,.8)!important}
+.discover{text-decoration:underline!important;text-underline-offset:4px}
+.discover .arrow-icon{overflow:visible}
