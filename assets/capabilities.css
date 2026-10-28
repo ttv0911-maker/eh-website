@@ -5,12 +5,6 @@
 @media print{.cap-tile>img{clip-path:none}.cap-tile{color:white}.cap-tile::after{opacity:1}}
 
 
-/* Overview is a normal static page, including its five navigation cards. */
-.capabilities-page main{position:static;transform:none}
-.capabilities-page .cap-overview{position:static;height:auto;min-height:0}
-.capabilities-page .cap-tile>img{clip-path:none!important;transform:none!important;transition:none!important;opacity:1!important}
-.capabilities-page .cap-tile,.capabilities-page .cap-tile-label,.capabilities-page .cap-tile-label .arrow{transition:none!important;transform:none!important;translate:none!important}
-.capabilities-page .cap-tile{color:#fff!important}
-.capabilities-page .cap-tile::after{opacity:1!important;transition:none!important;background:linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.1) 40%,rgba(0,0,0,.55))}
-.capabilities-page .cap-tile-label{text-shadow:0 1px 6px #0008}
-.capabilities-page main img{clip-path:none!important;transform:none!important;transition:none!important;opacity:1!important}
+/* Preserve card hover independently of the static page scroll. */
+.capabilities-page .cap-tile>img{clip-path:inset(100% 0 0)!important}
+.capabilities-page .cap-tile:is(:hover,:focus-visible,.is-preview)>img{clip-path:inset(0)!important}
